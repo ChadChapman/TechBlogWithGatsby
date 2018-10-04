@@ -18,10 +18,10 @@ export default class Template extends React.Component {
     return (
       <React.Fragment>
         <Helmet
-          title="Gatsby Default (Blog) Starter"
+          title="Chad Chapman Interesting Technology Musings"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Technology Blog' },
+            { name: 'keywords', content: 'Software, Technology, Chad, Chapman,' },
           ]}
         >
           <html lang="en" />
@@ -47,7 +47,7 @@ export default class Template extends React.Component {
                   textDecoration: 'none',
                 }}
               >
-                Gatsby Blog
+                Interesting Musings
               </Link>
             </h1>
           </div>
