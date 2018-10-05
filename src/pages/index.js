@@ -19,7 +19,7 @@ export default function Index(props) {
             return (
               <div className="blog-post-preview" key={post.id}>
                 <h1 className="title">
-                  <GatsbyLink to={post.frontmatter.path}>
+                  <GatsbyLink to={post.frontmatter.path} color='rebeccapurple'>
                     {post.frontmatter.title}
                   </GatsbyLink>
                 </h1>
