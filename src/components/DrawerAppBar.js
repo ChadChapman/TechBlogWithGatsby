@@ -136,7 +136,7 @@ class Dashboard extends React.Component {
                 noWrap
                 className={classes.title}
               >
-                Dashboard
+                Interesting Musings of just another Chad in tech.
               </Typography>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">

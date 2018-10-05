@@ -11,6 +11,9 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import Archive from '@material-ui/icons/Archive';
 import Laptop from '@material-ui/icons/Laptop';
+import Public from '@material-ui/icons/Public';
+import GroupAdd from '@material-ui/icons/GroupAdd';
+
 
 export const mainListItems = (
   <div>
@@ -49,7 +52,7 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+    <ListSubheader inset>More Stuff</ListSubheader>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
@@ -58,13 +61,13 @@ export const secondaryListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <GroupAdd />
       </ListItemIcon>
       <ListItemText primary="Code Tacoma" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <AssignmentIcon />
+        <Public />
       </ListItemIcon>
       <ListItemText primary="Volunteering" />
     </ListItem>
