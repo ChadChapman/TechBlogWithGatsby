@@ -1,10 +1,12 @@
 {
   "name": "gatsby-blog-starter-kit",
-  "description": "Gatsby blog starter example",
+  "description": "Technology blog made with Gatsby",
   "version": "1.2.0",
-  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
-  "repository": "https://github.com/dschau/gatsby-blog-starter-kit",
+  "author": "Chad Chapman building on the work of: Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
+  "repository": "https://github.com/ChadChapman/TechBlogWithGatsby",
   "dependencies": {
+    "@material-ui/core": "^3.1.2",
+    "@material-ui/icons": "^3.0.1",
     "gatsby": "~2.0.0-beta.69",
     "gatsby-link": "2.0.0-beta.4",
     "gatsby-plugin-catch-links": "2.0.2-beta.2",
@@ -18,14 +20,15 @@
     "react": "~16.3.0",
     "react-dom": "~16.3.0",
     "react-helmet": "~5.2.0",
-    "react-icons": "~2.2.5"
+    "react-icons": "~2.2.5",
+    "recharts": "^1.3.1"
   },
   "devDependencies": {
     "gh-pages": "1.1.0",
     "prettier": "1.10.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby, technology, blog, chad, chapman, graphql"
   ],
   "license": "MIT",
   "main": "n/a",
