@@ -19,7 +19,9 @@ export default function Template(props) {
       <div className="blog-post-container">
         <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
         <div className="blog-post">
-          <h1 className="title">
+          <h1 className="title"
+              color='rebeccapurple'
+          >
             {post.frontmatter.title}
           </h1>
           <h2 className="date">
