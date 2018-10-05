@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 
 import Link from '../components/Link';
 import Layout from '../components/Layout';
-import Dashboard from '../components/DashboardOrig';
 
 import '../css/index.css';
 
