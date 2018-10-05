@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import BlogDashboard from './BlogDashboard';
+import FooterBar from './FooterBar';
 
 import '../css/typography.css';
-import BlogDashboard from './BlogDashboard';
 
 const drawerWidth = 240;
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
+
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
 
@@ -78,12 +77,6 @@ const styles = theme => ({
     height: '100vh',
     overflow: 'auto',
   },
-  chartContainer: {
-    marginLeft: -22,
-  },
-  tableContainer: {
-    height: 320,
-  },
 });
 
 
@@ -113,6 +106,7 @@ export default class Template extends React.Component {
         </Helmet>
         <CssBaseline />
         <BlogDashboard location={this.props} />
+        <FooterBar />
 
       </React.Fragment>
     );

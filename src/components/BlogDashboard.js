@@ -17,6 +17,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listitem-main';
 import SimpleLineChart from './SimpleLineChart';
 import SimpleTable from './SimpleTable';
+import Tooltip from '@material-ui/core/Tooltip'
+
 
 const drawerWidth = 240;
 
@@ -40,6 +42,7 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    background: 'rebeccapurple',
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -58,6 +61,7 @@ const styles = theme => ({
   },
   title: {
     flexGrow: 1,
+
   },
   drawerPaper: {
     position: 'relative',
@@ -92,6 +96,10 @@ const styles = theme => ({
   tableContainer: {
     height: 320,
   },
+  iconButtonGH: {
+    color: 'inherit',
+    display: 'true',
+  }
 });
 
 class DashboardOrig extends React.Component {
@@ -139,11 +147,19 @@ class DashboardOrig extends React.Component {
               >
                 Just Another Chad
               </Typography>
-              <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
+              {/*<IconButton color="inherit">*/}
+                {/*<Badge badgeContent={4} color="secondary">*/}
+                  {/*<NotificationsIcon />*/}
+                {/*</Badge>*/}
+              {/*</IconButton>*/}
+              {/*<Tooltip title="my Github">*/}
+                {/*<IconButton className={classes.iconButtonGH}*/}
+                            {/*href="https://github.com/ChadChapman"*/}
+                            {/*aria-label="My Github profile">*/}
+                  {/*<i className="zmdi zmdi-github-alt"></i>*/}
+                {/*</IconButton>*/}
+              {/*</Tooltip>*/}
+
             </Toolbar>
           </AppBar>
           <Drawer

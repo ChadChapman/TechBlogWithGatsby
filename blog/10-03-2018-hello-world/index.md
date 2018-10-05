@@ -1,11 +1,12 @@
 ---
 path: "/hello-world.html"
-date: "2017-07-14T03:49:16.408Z"
-title: "Hello World"
+date: "2018-10-03T03:49:16.408Z"
+title: "Gatsby SPAs with GraphQL"
 tags: ["first"]
 ---
 
 ![hipster guy](./images/hipster.jpeg)
 
 
-I bet you’re still using Bootstrap too…
+ReST APIs vs GraphQL, competing technologies?
+Well, not really.
