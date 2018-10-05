@@ -25,6 +25,7 @@ const styles = theme => ({
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
+
   },
   toolbarIcon: {
     display: 'flex',
@@ -39,6 +40,8 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    background: `rebeccapurple`,
+    marginBottom: `1.45rem`,
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -57,6 +60,7 @@ const styles = theme => ({
   },
   title: {
     flexGrow: 1,
+    margin: `0 auto`,
   },
   drawerPaper: {
     position: 'relative',
@@ -162,6 +166,8 @@ class Dashboard extends React.Component {
             <Divider />
             <List>{secondaryListItems}</List>
           </Drawer>
+
+
         </div>
       </React.Fragment>
     );
