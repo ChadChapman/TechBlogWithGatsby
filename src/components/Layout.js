@@ -1,20 +1,104 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import DashboardAppBar from './DrawerAppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import '../css/typography.css';
+import BlogDashboard from './BlogDashboard';
+
+const drawerWidth = 240;
+
+const styles = theme => ({
+  root: {
+    display: 'flex',
+  },
+  toolbar: {
+    paddingRight: 24, // keep right padding when drawer closed
+
+  },
+  toolbarIcon: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: '0 8px',
+    ...theme.mixins.toolbar,
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    background: `rebeccapurple`,
+    marginBottom: `1.45rem`,
+  },
+  appBarShift: {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginLeft: 12,
+    marginRight: 36,
+  },
+  menuButtonHidden: {
+    display: 'none',
+  },
+  title: {
+    flexGrow: 1,
+    margin: `0 auto`,
+  },
+  drawerPaper: {
+    position: 'relative',
+    whiteSpace: 'nowrap',
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerPaperClose: {
+    overflowX: 'hidden',
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    width: theme.spacing.unit * 7,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing.unit * 9,
+    },
+  },
+  appBarSpacer: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3,
+    height: '100vh',
+    overflow: 'auto',
+  },
+  chartContainer: {
+    marginLeft: -22,
+  },
+  tableContainer: {
+    height: 320,
+  },
+});
+
 
 export default class Template extends React.Component {
+
+  state = {
+    open: true,
+  };
+
   static propTypes = {
     children: PropTypes.func,
   };
 
   render() {
     const { location } = this.props;
-
-    const isRoot = location.pathname === '/';
 
     return (
       <React.Fragment>
@@ -27,44 +111,12 @@ export default class Template extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        <DashboardAppBar/>
-        <div
-          style={{
-            background: `rebeccapurple`,
-            marginBottom: `1.45rem`,
-          }}
-        >
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`,
-            }}
-          >
-            <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
-              <Link
-                to="/"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                }}
-              >
-                Interesting Musings
-              </Link>
-            </h1>
-          </div>
-        </div>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </div>
+        <CssBaseline />
+        <BlogDashboard location={this.props} />
+
       </React.Fragment>
     );
   }
 }
+
+

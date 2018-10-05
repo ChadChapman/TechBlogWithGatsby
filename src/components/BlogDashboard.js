@@ -15,7 +15,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listitem-main';
-
+import SimpleLineChart from './SimpleLineChart';
+import SimpleTable from './SimpleTable';
 
 const drawerWidth = 240;
 
@@ -25,7 +26,6 @@ const styles = theme => ({
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
-
   },
   toolbarIcon: {
     display: 'flex',
@@ -40,8 +40,6 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: `rebeccapurple`,
-    marginBottom: `1.45rem`,
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -60,7 +58,6 @@ const styles = theme => ({
   },
   title: {
     flexGrow: 1,
-    margin: `0 auto`,
   },
   drawerPaper: {
     position: 'relative',
@@ -97,7 +94,7 @@ const styles = theme => ({
   },
 });
 
-class Dashboard extends React.Component {
+class DashboardOrig extends React.Component {
   state = {
     open: true,
   };
@@ -111,7 +108,7 @@ class Dashboard extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, location } = this.props;
 
     return (
       <React.Fragment>
@@ -140,7 +137,7 @@ class Dashboard extends React.Component {
                 noWrap
                 className={classes.title}
               >
-                Interesting Musings of just another Chad in tech.
+                Just Another Chad
               </Typography>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">
@@ -166,16 +163,39 @@ class Dashboard extends React.Component {
             <Divider />
             <List>{secondaryListItems}</List>
           </Drawer>
-
-
+          <main className={classes.content}>
+            <div className={classes.appBarSpacer} />
+            {/*<Typography variant="display1" gutterBottom component="h2">*/}
+              {/*Orders*/}
+            {/*</Typography>*/}
+            {/*<Typography component="div" className={classes.chartContainer}>*/}
+              {/*<SimpleLineChart />*/}
+            {/*</Typography>*/}
+            {/*<Typography variant="display1" gutterBottom component="h2">*/}
+              {/*Products*/}
+            {/*</Typography>*/}
+            {/*<div className={classes.tableContainer}>*/}
+              {/*<SimpleTable />*/}
+            {/*</div>*/}
+            <div
+              style={{
+                margin: `0 auto`,
+                maxWidth: 960,
+                padding: `0px 1.0875rem 1.45rem`,
+                paddingTop: 0,
+              }}
+            >
+              {this.props.location.children}
+            </div>
+          </main>
         </div>
       </React.Fragment>
     );
   }
 }
 
-Dashboard.propTypes = {
+DashboardOrig.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Dashboard);
+export default withStyles(styles)(DashboardOrig);

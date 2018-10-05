@@ -94,7 +94,7 @@ const styles = theme => ({
   },
 });
 
-class Dashboard extends React.Component {
+class DashboardOrig extends React.Component {
   state = {
     open: true,
   };
@@ -165,12 +165,12 @@ class Dashboard extends React.Component {
           </Drawer>
           <main className={classes.content}>
             <div className={classes.appBarSpacer} />
-            <Typography variant="display1" gutterBottom component="h2">
-              Orders
-            </Typography>
-            <Typography component="div" className={classes.chartContainer}>
-              <SimpleLineChart />
-            </Typography>
+            {/*<Typography variant="display1" gutterBottom component="h2">*/}
+              {/*Orders*/}
+            {/*</Typography>*/}
+            {/*<Typography component="div" className={classes.chartContainer}>*/}
+              {/*<SimpleLineChart />*/}
+            {/*</Typography>*/}
             <Typography variant="display1" gutterBottom component="h2">
               Products
             </Typography>
@@ -184,8 +184,8 @@ class Dashboard extends React.Component {
   }
 }
 
-Dashboard.propTypes = {
+DashboardOrig.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Dashboard);
+export default withStyles(styles)(DashboardOrig);
