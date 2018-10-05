@@ -6,7 +6,7 @@
   float: right;
 }
 
-.blog-post .title, .blog-post .date {
+.blog-post .date {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -21,6 +21,11 @@
   min-height: 60px;
 }
 
-.title {
+.blog-post .title {
   color: rebeccapurple;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
+
+
