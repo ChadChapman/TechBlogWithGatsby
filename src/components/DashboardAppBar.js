@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
@@ -14,9 +13,9 @@ import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
-import SimpleLineChart from './SimpleLineChart';
-import SimpleTable from './SimpleTable';
+import { mainListItems, secondaryListItems } from './listitem-main';
+
+const drawerWidth = 240;
 
 const styles = theme => ({
   root: {
@@ -64,36 +63,17 @@ const styles = theme => ({
     height: '100vh',
     overflow: 'auto',
   },
-  drawerPaper: {
-    position: 'relative',
-    whiteSpace: 'nowrap',
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    width: theme.spacing.unit * 7,
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing.unit * 9,
-    },
-  },
+
 });
 
 class DashboardAppBar extends React.Component {
 
   state = {
-    open: true,
+    open: false,
   };
 
-  handleDrawerOpen = () => {
-    this.setState({ open: true });
+  handleDrawerOpen = () => { //change this when want it to work again
+    this.setState({ open: false });
   };
 
   handleDrawerClose = () => {
@@ -130,7 +110,7 @@ class DashboardAppBar extends React.Component {
                   noWrap
                   className={classes.title}
                 >
-                  Dashboard
+                  New App Bar
                 </Typography>
                 <IconButton color="inherit">
                   <Badge badgeContent={4} color="secondary">
@@ -139,38 +119,6 @@ class DashboardAppBar extends React.Component {
                 </IconButton>
               </Toolbar>
             </AppBar>
-            <Drawer
-              variant="permanent"
-              classes={{
-                paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-              }}
-              open={this.state.open}
-            >
-              <div className={classes.toolbarIcon}>
-                <IconButton onClick={this.handleDrawerClose}>
-                  <ChevronLeftIcon />
-                </IconButton>
-              </div>
-              <Divider />
-              <List>{mainListItems}</List>
-              <Divider />
-              <List>{secondaryListItems}</List>
-            </Drawer>
-            <main className={classes.content}>
-              <div className={classes.appBarSpacer} />
-              <Typography variant="display1" gutterBottom component="h2">
-                Orders
-              </Typography>
-              <Typography component="div" className={classes.chartContainer}>
-                <SimpleLineChart />
-              </Typography>
-              <Typography variant="display1" gutterBottom component="h2">
-                Products
-              </Typography>
-              <div className={classes.tableContainer}>
-                <SimpleTable />
-              </div>
-            </main>
           </div>
       </React.Fragment>
     )
