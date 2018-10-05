@@ -1,25 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames'
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import DashboardAppBar from './DrawerAppBar';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import BlogPostList from './BlogPostList';
-import GatsbyLink from 'gatsby-link';
-import { graphql } from 'gatsby';
-
-import Link from '../components/Link';
-
 
 import '../css/typography.css';
+import BlogDashboard from './BlogDashboard';
 
 const drawerWidth = 240;
 
@@ -108,22 +93,12 @@ export default class Template extends React.Component {
     open: true,
   };
 
-  handleDrawerOpen = () => {
-    this.setState({ open: true });
-  };
-
-  handleDrawerClose = () => {
-    this.setState({ open: false });
-  };
-
   static propTypes = {
     children: PropTypes.func,
   };
 
   render() {
     const { location } = this.props;
-
-    const isRoot = location.pathname === '/';
 
     return (
       <React.Fragment>
@@ -136,66 +111,12 @@ export default class Template extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        {/*<DashboardAppBar/>*/}
         <CssBaseline />
-        <BlogPostList {...props} />
+        <BlogDashboard location={this.props} />
 
-
-        {/*<div*/}
-          {/*style={{*/}
-            {/*background: `rebeccapurple`,*/}
-            {/*marginBottom: `1.45rem`,*/}
-          {/*}}*/}
-        {/*>*/}
-          {/*<div*/}
-            {/*style={{*/}
-              {/*margin: `0 auto`,*/}
-              {/*maxWidth: 960,*/}
-              {/*padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`,*/}
-            {/*}}*/}
-          {/*>*/}
-            {/*<h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>*/}
-              {/*<Link*/}
-                {/*to="/"*/}
-                {/*style={{*/}
-                  {/*color: 'white',*/}
-                  {/*textDecoration: 'none',*/}
-                {/*}}*/}
-              {/*>*/}
-                {/*Interesting Musings*/}
-              {/*</Link>*/}
-            {/*</h1>*/}
-          {/*</div>*/}
-        {/*</div>*/}
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </div>
       </React.Fragment>
     );
   }
 }
 
-export const pageQuery = graphql`
-    query IndexQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-            edges {
-                node {
-                    excerpt(pruneLength: 250)
-                    id
-                    frontmatter {
-                        title
-                        date(formatString: "MMMM DD, YYYY")
-                        path
-                    }
-                }
-            }
-        }
-    }
-`;
+
