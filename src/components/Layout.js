@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import DashboardAppBar from './DashboardAppBar';
+import DashboardAppBar from './DrawerAppBar';
 
 import '../css/typography.css';
 

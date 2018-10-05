@@ -9,6 +9,8 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import Archive from '@material-ui/icons/Archive';
+import Laptop from '@material-ui/icons/Laptop';
 
 export const mainListItems = (
   <div>
@@ -16,31 +18,31 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="Personal Page" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="LinkedIn" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <BarChartIcon />
+        <Laptop />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="Github" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Projects" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <Archive />
+      </ListItemIcon>
+      <ListItemText primary="Blog Archives" />
     </ListItem>
   </div>
 );
@@ -52,19 +54,19 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText primary="Contact Me" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <ListItemText primary="Code Tacoma" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+      <ListItemText primary="Volunteering" />
     </ListItem>
   </div>
 );
