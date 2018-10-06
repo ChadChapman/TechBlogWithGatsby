@@ -31,7 +31,8 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    padding: '0 8px',
+   // padding: '0 8px',
+    padding:`1rem 0.75rem`,
     ...theme.mixins.toolbar,
   },
   appBar: {
@@ -40,7 +41,8 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'rebeccapurple',
+    background: '#339966',
+
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -53,12 +55,14 @@ const styles = theme => ({
   menuButton: {
     marginLeft: 12,
     marginRight: 36,
+    padding:`1.45rem 1.0875rem`,
   },
   menuButtonHidden: {
     display: 'none',
   },
   title: {
     flexGrow: 1,
+    padding:`1.55rem 1.095rem`,
 
   },
   drawerPaper: {
