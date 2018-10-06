@@ -106,7 +106,7 @@ const styles = theme => ({
 
 class DashboardOrig extends React.Component {
   state = {
-    open: true,
+    open: false,
   };
 
   handleDrawerOpen = () => {
