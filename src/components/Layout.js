@@ -23,13 +23,15 @@ export default class Template extends React.Component {
     return (
       <React.Fragment>
         <Helmet
-          title="Chad Chapman Interesting Technology Musings"
+          title="Just Another Chad"
           meta={[
             { name: 'description', content: 'Technology Blog' },
             { name: 'keywords', content: 'Software, Technology, Chad, Chapman,' },
           ]}
         >
+          <i rel="shortcut icon" className="zmdi zmdi-flower-alt"></i>
           <html lang="en" />
+
         </Helmet>
         <CssBaseline />
         <BlogDashboard location={this.props} />
