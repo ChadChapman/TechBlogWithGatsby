@@ -21,5 +21,10 @@
 }
 
 .title {
-  color: rebeccapurple !important;
+  color: rebeccapurple;
+}
+
+a, a:link {
+  color:olive;
+  text-decoration:none;
 }
