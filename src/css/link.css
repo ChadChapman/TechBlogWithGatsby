@@ -1,8 +1,8 @@
 .link {
   display: inline-block;
-  color: rebeccapurple;
+  color: #757575;
   padding: 0.75rem 1rem;
-  border: 5px solid rebeccapurple;
+  border: 3px solid #757575;
   text-decoration: none;
   position: relative;
 }
