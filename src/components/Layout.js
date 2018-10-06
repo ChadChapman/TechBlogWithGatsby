@@ -35,7 +35,7 @@ export default class Template extends React.Component {
         </Helmet>
         <CssBaseline />
         <BlogDashboard location={this.props} />
-        <FooterBar />
+        {/*<FooterBar />*/}
 
       </React.Fragment>
     );
