@@ -6,6 +6,7 @@ import BlogDashboard from './BlogDashboard';
 import FooterBar from './FooterBar';
 
 import '../css/typography.css';
+const tabIcon =  '../../public/icons/smiley.png'
 
 
 export default class Template extends React.Component {
@@ -19,7 +20,7 @@ export default class Template extends React.Component {
   };
 
   render() {
-
+    const tabIcon =  '../../public/icons/smiley.png'
     return (
       <React.Fragment>
         <Helmet
@@ -29,7 +30,6 @@ export default class Template extends React.Component {
             { name: 'keywords', content: 'Software, Technology, Chad, Chapman,' },
           ]}
         >
-          <i rel="shortcut icon" className="zmdi zmdi-flower-alt"></i>
           <html lang="en" />
 
         </Helmet>
