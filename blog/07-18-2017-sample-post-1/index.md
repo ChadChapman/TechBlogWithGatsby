@@ -6,4 +6,4 @@ tags: ["content", "websites", "drivel"]
 ---
 
 Making a blog webite is a fun exercise.  However, filling that blog with content can turn
-into a chore.  We'll see how this one goes!  
+into a chore.  We'll see how this one goes! _Update 2020: Not well, apparently._
